@@ -82,9 +82,9 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     //MARK: - Search Bar Delegate Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchString = searchBar.text
-    }
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+        if songSearchResults.count == 0 {
+            searchBar.resignFirstResponder()
+        }
     }
 
     /*
