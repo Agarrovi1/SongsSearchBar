@@ -60,13 +60,19 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return songSearchResults.count
+        return songSearchResults.count == 0 ? 1 : songSearchResults.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if songSearchResults.count == 0 {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "No Search Result Found"
+            return cell
+        }
         let song = songSearchResults[indexPath.row]
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
         cell.textLabel?.text = song.name
         cell.detailTextLabel?.text = song.artist
