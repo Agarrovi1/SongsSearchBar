@@ -7,3 +7,10 @@
 //
 
 import Foundation
+func filterSongNameNotCaseSensitive(arrOfSongs: [Song], string: String) -> [Song] {
+    return arrOfSongs.filter({$0.name.lowercased().contains(string.lowercased())})
+}
+
+func filterArtistNotCaseSensitive(arrOfSongs: [Song], string: String) -> [Song] {
+    return arrOfSongs.filter({$0.artist.lowercased().contains(string.lowercased())})
+}

@@ -10,6 +10,7 @@
 		4D080FB92305E3CF0049B6B3 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D080FB82305E3CF0049B6B3 /* Song.swift */; };
 		4D080FBC2305E4C30049B6B3 /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D080FBB2305E4C30049B6B3 /* SongListTableViewController.swift */; };
 		4D080FC02305EB730049B6B3 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D080FBF2305EB730049B6B3 /* SongDetailViewController.swift */; };
+		4D080FC22305F2720049B6B3 /* filter not case sensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D080FC12305F2720049B6B3 /* filter not case sensitive.swift */; };
 		54DF904A1FB02DBB00B228CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF90491FB02DBB00B228CF /* AppDelegate.swift */; };
 		54DF904F1FB02DBB00B228CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54DF904D1FB02DBB00B228CF /* Main.storyboard */; };
 		54DF90511FB02DBB00B228CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54DF90501FB02DBB00B228CF /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		4D080FB82305E3CF0049B6B3 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		4D080FBB2305E4C30049B6B3 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
 		4D080FBF2305EB730049B6B3 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		4D080FC12305F2720049B6B3 /* filter not case sensitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "filter not case sensitive.swift"; sourceTree = "<group>"; };
 		54DF90461FB02DBB00B228CF /* SongsTableViewSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsTableViewSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DF90491FB02DBB00B228CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54DF904E1FB02DBB00B228CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				54DF905B1FB02F3E00B228CF /* SongAPI.swift */,
 				4D080FB82305E3CF0049B6B3 /* Song.swift */,
+				4D080FC12305F2720049B6B3 /* filter not case sensitive.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D080FB92305E3CF0049B6B3 /* Song.swift in Sources */,
+				4D080FC22305F2720049B6B3 /* filter not case sensitive.swift in Sources */,
 				4D080FC02305EB730049B6B3 /* SongDetailViewController.swift in Sources */,
 				54DF905C1FB02F3E00B228CF /* SongAPI.swift in Sources */,
 				4D080FBC2305E4C30049B6B3 /* SongListTableViewController.swift in Sources */,

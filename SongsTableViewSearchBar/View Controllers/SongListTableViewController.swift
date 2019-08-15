@@ -10,7 +10,34 @@ import UIKit
 
 class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     let songs = Song.loveSongs
-    
+    var songSearchResults: [Song] {
+        get {
+        guard let searchString = searchString else {
+            return songs
+        }
+        guard searchString != "" else {
+            return songs
+        }
+        if let scopeTitles = searchBarOutlet.scopeButtonTitles {
+            let currentScopeIndex = searchBarOutlet.selectedScopeButtonIndex
+            switch scopeTitles[currentScopeIndex] {
+            case "Song":
+                return filterSongNameNotCaseSensitive(arrOfSongs: songs, string: searchString)
+            case "Artist":
+                return filterArtistNotCaseSensitive(arrOfSongs: songs, string: searchString)
+            default:
+                return songs
+            }
+        }
+        return songs
+    }
+    }
+    var searchString: String? = nil {
+        didSet {
+            print(searchString)
+            self.tableView.reloadData()
+        }
+    }
 
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     
@@ -34,12 +61,12 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return songs.count
+        return songSearchResults.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let song = songs[indexPath.row]
+        let song = songSearchResults[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
         cell.textLabel?.text = song.name
         cell.detailTextLabel?.text = song.artist
@@ -48,7 +75,7 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     
     //MARK: - Search Bar Delegate Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        <#code#>
+        searchString = searchBar.text
     }
     
 
@@ -95,7 +122,7 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
         guard let destination = segue.destination as? SongDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
             return
         }
-        destination.song = songs[indexPath.row]
+        destination.song = songSearchResults[indexPath.row]
     }
  
 
