@@ -17,11 +17,12 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wF2-Q7-jt1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.71906042098999023" green="0.30073672533035278" blue="0.38038837909698486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" showsScopeBar="YES" id="Ohr-Oc-eJR">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.84465640779999995" green="0.69275974650000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" red="0.67872431499999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <scopeButtonTitles>
                                 <string>Song</string>
@@ -52,6 +53,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.71844786405563354" green="0.30067020695503444" blue="0.38172452947864799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="IZ8-A4-ej4" kind="show" identifier="songListToDetailSegue" id="juX-oc-LWY"/>
                                 </connections>
@@ -105,7 +107,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.339510115039726" blue="0.38014140685205483" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uvP-yB-1Zd" firstAttribute="leading" secondItem="fnZ-hl-Uj9" secondAttribute="leading" constant="54" id="5YB-z4-Oqm"/>
                             <constraint firstItem="ybX-HA-Q5X" firstAttribute="leading" secondItem="fnZ-hl-Uj9" secondAttribute="leading" constant="54" id="6VG-1M-nKE"/>
