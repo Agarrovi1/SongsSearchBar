@@ -83,7 +83,9 @@ class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchString = searchBar.text
     }
-    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 
     /*
     // Override to support conditional editing of the table view.
