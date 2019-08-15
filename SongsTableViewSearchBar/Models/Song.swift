@@ -2,21 +2,11 @@
 //  Song.swift
 //  SongsTableViewSearchBar
 //
-//  Created by C4Q  on 11/6/17.
-//  Copyright © 2017 C4Q . All rights reserved.
+//  Created by Angela Garrovillas on 8/15/19.
+//  Copyright © 2019 C4Q . All rights reserved.
 //
 
 import Foundation
-
-class SongAPI: Codable {
-    var song_name: String
-    var display_artist: String
-    init(song_name: String, display_artist: String) {
-        self.song_name = song_name
-        self.display_artist = display_artist
-    }
-}
-
 
 class Song {
     var name: String
@@ -25,7 +15,7 @@ class Song {
         self.name = name
         self.artist = artist
     }
-    static let loveSongs = [
+    static let loveSongs: [Song] = [
         Song(name: "Walkin' In The Rain With The One I Love", artist: "Love Unlimited"),
         Song(name: "Love Theme From The Godfather (Speak Softly Love)", artist: "Andy Williams"),
         Song(name: "Long Haired Lover From Liverpool", artist: "Little Jimmy Osmond with The Mike Curb Congregation"),
