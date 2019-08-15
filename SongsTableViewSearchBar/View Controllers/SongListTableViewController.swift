@@ -8,15 +8,19 @@
 
 import UIKit
 
-class SongListTableViewController: UITableViewController {
+class SongListTableViewController: UITableViewController,UISearchBarDelegate {
     let songs = Song.loveSongs
+    
 
+    @IBOutlet weak var searchBarOutlet: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchBarOutlet.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -40,6 +44,11 @@ class SongListTableViewController: UITableViewController {
         cell.textLabel?.text = song.name
         cell.detailTextLabel?.text = song.artist
         return cell
+    }
+    
+    //MARK: - Search Bar Delegate Methods
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        <#code#>
     }
     
 
